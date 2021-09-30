@@ -30,6 +30,7 @@ jobs:
       - uses: katyo/publish-crates@v1
         with:
           args: --verbose --allow-dirty
+          registry-token: ${{ secrets.CARGO_API_KEY }}
           dry-run: true
       - name: Configure git and add files
         run: |
